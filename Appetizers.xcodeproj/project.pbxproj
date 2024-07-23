@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E30EA1C02C503759001179DD /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30EA1BF2C503759001179DD /* RemoteImage.swift */; };
 		E361D2E72C46D37D0076639C /* AppetizersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E361D2E62C46D37D0076639C /* AppetizersApp.swift */; };
 		E361D2E92C46D37D0076639C /* AppetizerTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E361D2E82C46D37D0076639C /* AppetizerTabView.swift */; };
 		E361D2EB2C46D3800076639C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E361D2EA2C46D3800076639C /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E30EA1BF2C503759001179DD /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		E361D2E32C46D37D0076639C /* Appetizers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appetizers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E361D2E62C46D37D0076639C /* AppetizersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizersApp.swift; sourceTree = "<group>"; };
 		E361D2E82C46D37D0076639C /* AppetizerTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerTabView.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				E3C1926E2C4AD85F00DE215B /* Alert.swift */,
 				E3DD68AD2C4C8E310073C60A /* LoadingView.swift */,
 				E3DD68AF2C4C8F4E0073C60A /* Color+Ext.swift */,
+				E30EA1BF2C503759001179DD /* RemoteImage.swift */,
 			);
 			path = Appetizers;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				E3DD68AE2C4C8E310073C60A /* LoadingView.swift in Sources */,
 				E361D2F72C46D4210076639C /* AccountView.swift in Sources */,
 				E361D3012C47EAA80076639C /* NetworkManager.swift in Sources */,
+				E30EA1C02C503759001179DD /* RemoteImage.swift in Sources */,
 				E361D2E92C46D37D0076639C /* AppetizerTabView.swift in Sources */,
 				E3C1926F2C4AD85F00DE215B /* Alert.swift in Sources */,
 				E361D2E72C46D37D0076639C /* AppetizersApp.swift in Sources */,
