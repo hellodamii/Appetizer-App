@@ -20,24 +20,23 @@ struct AppetizerDetailView: View {
                 }) {
                     Image(systemName: "xmark")
                         .fontWeight(.semibold)
-                        .foregroundColor(.xcolor)
+                        .foregroundColor(.black)
+                        .imageScale(.small)
                         .frame(width: 32, height: 32)
-                        .background(Color(.xbgcolor))
+                        .background(Color.gray.opacity(0.2))
                         .cornerRadius(32)
-                        .padding(16)}
+                        .padding(8)}
             }
 
             Text(appetizer.name)
                 .font(.system(size: 24, weight: .semibold, design: .default))
                 .fontWeight(.semibold)
             
-            Text(appetizer.description)
+            Text("You will need extra napkins with these tasty treats")
                 .multilineTextAlignment(.center)
                 .font(.system(size: 18, weight: .regular))
-                .lineSpacing(2.1)
-                .lineLimit(nil)
-                .padding(.horizontal)
-                .frame(width: 280)
+                .lineSpacing(1.7)
+                .frame(width: 240)
                 
             
             Image("asian-flank-steak")
