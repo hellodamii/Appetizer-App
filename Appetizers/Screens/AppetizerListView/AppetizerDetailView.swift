@@ -10,20 +10,21 @@ import SwiftUI
 struct AppetizerDetailView: View {
     
     let appetizer: Appetizer
+    @Binding var isShowingDetail: Bool
     
     var body: some View {
         VStack(spacing: 16) {
             HStack{
                 Spacer()
                 Button(action:{
-                    
-                }) {
+                    isShowingDetail = false
+                    }) {
                     Image(systemName: "xmark")
                         .fontWeight(.semibold)
                         .foregroundColor(.black)
                         .imageScale(.small)
                         .frame(width: 32, height: 32)
-                        .background(Color.gray.opacity(0.2))
+                        .background(Color.gray.opacity(0.1))
                         .cornerRadius(32)
                         .padding(8)}
             }
@@ -32,15 +33,14 @@ struct AppetizerDetailView: View {
                 .font(.system(size: 24, weight: .semibold, design: .default))
                 .fontWeight(.semibold)
             
-            Text("You will need extra napkins with these tasty treats")
+            Text(appetizer.description)
                 .multilineTextAlignment(.center)
                 .font(.system(size: 18, weight: .regular))
                 .lineSpacing(1.7)
                 .frame(width: 240)
                 
             
-            Image("asian-flank-steak")
-                .resizable()
+            AppetizerRemoteImage(urlString: appetizer.imageURL)
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 311, height: 158)
                 .cornerRadius(16)
@@ -65,7 +65,7 @@ struct AppetizerDetailView: View {
                     Text("Calories")
                         .font(.system(size: 16, weight: .regular))
                     Spacer()
-                    Text("700g")
+                    Text("\(appetizer.calories)g")
                         .font(.system(size: 16, weight: .medium))
                 }
                 .frame(width: 303)
@@ -77,7 +77,7 @@ struct AppetizerDetailView: View {
                     Text("Carbs")
                         .font(.system(size: 16, weight: .regular))
                     Spacer()
-                    Text("11g")
+                    Text("\(appetizer.carbs)g")
                         .font(.system(size: 16, weight: .medium))
                 }
                 .frame(width: 303)
@@ -89,7 +89,7 @@ struct AppetizerDetailView: View {
                     Text("Protein")
                         .font(.system(size: 16, weight: .regular))
                     Spacer()
-                    Text("13g")
+                    Text("\(appetizer.protein)g")
                         .font(.system(size: 16, weight: .medium))
                 }
                 .frame(width: 303)
@@ -127,5 +127,6 @@ struct AppetizerDetailView: View {
 }
 
 #Preview {
-    AppetizerDetailView(appetizer: MockData.sampleAppetizer)
+    AppetizerDetailView(appetizer: MockData.sampleAppetizer,
+                        isShowingDetail: .constant(true))
 }
