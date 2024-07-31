@@ -9,43 +9,45 @@ import SwiftUI
 
 struct AccountView: View {
     
-    @State private var firstName = ""
-    @State private var lastName = ""
-    @State private var Email = ""
-    @State private var birthdate = Date()
-    @State private var extraNapkins = false
-    @State private var frequentRefills = false
+    @StateObject var viewModel = AccountViewModel()
+    
+    
     var body: some View {
         NavigationView {
             Form {
                 Section(header: Text("Personal Info")) {
-                    TextField("First Name", text: $firstName)
+                    TextField("First Name", text: $viewModel.user.firstName)
                         .disableAutocorrection(true)
-                    TextField("Last Name", text: $lastName)
+                    TextField("Last Name", text: $viewModel.user.lastName)
                         .disableAutocorrection(true)
-                    TextField("Email", text: $Email)
+                    TextField("Email", text: $viewModel.user.email)
                         .keyboardType(.emailAddress)
                         .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
                         .disableAutocorrection(true)
                     
-                    DatePicker("Birthday", selection: $birthdate,
+                    DatePicker("Birthday", selection: $viewModel.user.birthdate,
                                displayedComponents: .date)
                     
                     Button{
-                        print("Save")
+                        viewModel.saveChanges()
                     } label: {
                             Text("Save Changes")
                     }
                 }
                 
                 Section(header: Text("Requests")) {
-                    Toggle("Extra Napkins", isOn: $extraNapkins)
-                    Toggle("Frequent Refills", isOn: $frequentRefills)
+                    Toggle("Extra Napkins", isOn: $viewModel.user.extraNapkins)
+                    Toggle("Frequent Refills", isOn: $viewModel.user.frequentRefills)
                         
                 }
                 .toggleStyle(SwitchToggleStyle(tint: .brandPrimary))
             }
             .navigationTitle("Account")
+        }
+        .alert(item: $viewModel.alertItem) { alertItem in
+            Alert(title: alertItem.title, 
+                  message: alertItem.message, 
+                  dismissButton: alertItem.dismissButton)
         }
     }
 }

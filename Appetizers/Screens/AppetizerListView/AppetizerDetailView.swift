@@ -36,8 +36,11 @@ struct AppetizerDetailView: View {
             Text(appetizer.description)
                 .multilineTextAlignment(.center)
                 .font(.system(size: 18, weight: .regular))
-                .lineSpacing(1.7)
-                .frame(width: 240)
+                .minimumScaleFactor(0.5)
+                .frame(width: 280)
+                
+                
+                
                 
             
             AppetizerRemoteImage(urlString: appetizer.imageURL)
