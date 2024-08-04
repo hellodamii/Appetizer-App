@@ -8,10 +8,42 @@
 import SwiftUI
 
 struct OrderView: View {
+    
+    @EnvironmentObject var order: Order
+    
     var body: some View {
         NavigationView {
-            Text("Orders")
-                .navigationTitle("Orders")
+            ZStack {
+                VStack {
+                    List {
+                        ForEach(order.items) { appetizer in
+                            AppetizerListCell(appetizer: appetizer)
+                        }
+                        .onDelete(perform: { indexSet in
+                            order.items.remove(atOffsets: indexSet)
+                        })
+                    }
+                    .listStyle(PlainListStyle())
+                    
+                    Button(action: {
+                                }) {
+                                    Text("Place Order")
+                                   .font(.system(size: 18, weight: .medium))
+                                   .padding()
+                                    .frame(width: 311, height: 54)
+                                    .foregroundColor(.white)
+                                    .background(Color.brandPrimary)
+                                    .cornerRadius(16)   }
+                                    .padding(.bottom, 25)
+
+                }
+                
+                if order.items.isEmpty {
+                    EmptyState(imageName: "no-notification", message: "Your cart is empty")
+                }
+            }
+            
+            .navigationTitle("Orders")
                 
             }
         }

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct AppetizerDetailView: View {
     
+    @EnvironmentObject var order: Order
+    
     let appetizer: Appetizer
     @Binding var isShowingDetail: Bool
     
@@ -104,7 +106,7 @@ struct AppetizerDetailView: View {
             .cornerRadius(16)
             .padding(.bottom)
                 
-            Button(action: {
+            Button(action: { order.add(appetizer) 
                         }) {
                             HStack {
                                 Image(systemName: "bag")

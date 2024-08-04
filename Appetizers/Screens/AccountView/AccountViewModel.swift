@@ -2,7 +2,7 @@
 //  AccountViewModel.swift
 //  Appetizers
 //
-//  Created by Busha on 29/07/2024.
+//  Created by Damilare on 29/07/2024.
 //
 
 import SwiftUI
@@ -25,7 +25,6 @@ final class AccountViewModel: ObservableObject {
             }
         }
     
-    
     func retrieveUser() {
         guard let userData = userData else { return }
         
@@ -34,9 +33,7 @@ final class AccountViewModel: ObservableObject {
         }   catch {
             alertItem = AlertContext.invalidUserData
         }
-        
     }
-    
     
     var isValidForm: Bool {
         guard !user.firstName.isEmpty && !user.lastName.isEmpty && !user.email.isEmpty else {
@@ -48,10 +45,6 @@ final class AccountViewModel: ObservableObject {
             alertItem = AlertContext.inValidEmail
             return false
         }
-        
         return true
-  
     }
-    
-    
 }

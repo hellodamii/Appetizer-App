@@ -17,7 +17,7 @@ struct AppetizerListView: View {
         
         ZStack {
             NavigationView {
-                List(viewModel.appetizers) {
+            List(viewModel.appetizers) {
                     appetizer in
                     AppetizerListCell(appetizer: appetizer)
                         .onTapGesture {
@@ -25,6 +25,7 @@ struct AppetizerListView: View {
                             isShowingDetail = true
                         }
                 }
+                .listStyle(PlainListStyle())
                 .navigationTitle("Appetizers")
                 .disabled(isShowingDetail)
                     
@@ -41,7 +42,7 @@ struct AppetizerListView: View {
             if viewModel.isLoading {
                 LoadingView()
             }
-                        
+           
         }
         .alert(item: $viewModel.alertItem) {
             alertItem in

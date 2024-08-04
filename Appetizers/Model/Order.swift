@@ -2,7 +2,16 @@
 //  Order.swift
 //  Appetizers
 //
-//  Created by Busha on 04/08/2024.
+//  Created by Damilare on 04/08/2024.
 //
 
-import Foundation
+import SwiftUI
+
+final class Order: ObservableObject {
+    @Published var items: [Appetizer] = []
+    
+    
+    func add(_ appetizer: Appetizer) {
+        items.append(appetizer)
+    }
+}
