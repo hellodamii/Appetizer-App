@@ -19,15 +19,14 @@ struct OrderView: View {
                         ForEach(order.items) { appetizer in
                             AppetizerListCell(appetizer: appetizer)
                         }
-                        .onDelete(perform: { indexSet in
-                            order.items.remove(atOffsets: indexSet)
-                        })
+                        .onDelete(perform: order.deleteItems)
+                        
                     }
                     .listStyle(PlainListStyle())
                     
                     Button(action: {
                                 }) {
-                                    Text("Place Order")
+                                    Text("$\(order.totalPrice, specifier: "%.2f") - Place Order")
                                    .font(.system(size: 18, weight: .medium))
                                    .padding()
                                     .frame(width: 311, height: 54)
@@ -39,7 +38,8 @@ struct OrderView: View {
                 }
                 
                 if order.items.isEmpty {
-                    EmptyState(imageName: "no-notification", message: "Your cart is empty")
+                    EmptyState(imageName: "no-notification", 
+                               message: "Your cart is empty")
                 }
             }
             
@@ -47,6 +47,7 @@ struct OrderView: View {
                 
             }
         }
+         
     }
 
 #Preview {

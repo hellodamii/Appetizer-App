@@ -107,6 +107,7 @@ struct AppetizerDetailView: View {
             .padding(.bottom)
                 
             Button(action: { order.add(appetizer) 
+                        isShowingDetail = false 
                         }) {
                             HStack {
                                 Image(systemName: "bag")
