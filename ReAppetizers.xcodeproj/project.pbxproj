@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		E30EA1C02C503759001179DD /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30EA1BF2C503759001179DD /* RemoteImage.swift */; };
 		E30EA1CF2C519A6F001179DD /* AppetizerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30EA1CE2C519A6F001179DD /* AppetizerDetailView.swift */; };
+		E3535A9E2C6A4A97000AE7B6 /* BricolageGrotesque_24pt_Condensed-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3535A9D2C6A4A97000AE7B6 /* BricolageGrotesque_24pt_Condensed-Medium.ttf */; };
+		E3535AA12C6A63EE000AE7B6 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3535AA02C6A63EE000AE7B6 /* Banner.swift */; };
+		E3535AA52C6A7FDB000AE7B6 /* BricolageGrotesque-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3535AA22C6A7FDA000AE7B6 /* BricolageGrotesque-Medium.ttf */; };
+		E3535AA62C6A7FDB000AE7B6 /* BricolageGrotesque-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3535AA32C6A7FDB000AE7B6 /* BricolageGrotesque-Regular.ttf */; };
+		E3535AA72C6A7FDB000AE7B6 /* BricolageGrotesque-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3535AA42C6A7FDB000AE7B6 /* BricolageGrotesque-Bold.ttf */; };
 		E361D2E72C46D37D0076639C /* AppetizersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E361D2E62C46D37D0076639C /* AppetizersApp.swift */; };
 		E361D2E92C46D37D0076639C /* AppetizerTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E361D2E82C46D37D0076639C /* AppetizerTabView.swift */; };
 		E361D2EB2C46D3800076639C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E361D2EA2C46D3800076639C /* Assets.xcassets */; };
@@ -34,6 +39,12 @@
 /* Begin PBXFileReference section */
 		E30EA1BF2C503759001179DD /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		E30EA1CE2C519A6F001179DD /* AppetizerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerDetailView.swift; sourceTree = "<group>"; };
+		E3535A9D2C6A4A97000AE7B6 /* BricolageGrotesque_24pt_Condensed-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BricolageGrotesque_24pt_Condensed-Medium.ttf"; sourceTree = "<group>"; };
+		E3535A9F2C6A4B9A000AE7B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E3535AA02C6A63EE000AE7B6 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		E3535AA22C6A7FDA000AE7B6 /* BricolageGrotesque-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BricolageGrotesque-Medium.ttf"; sourceTree = "<group>"; };
+		E3535AA32C6A7FDB000AE7B6 /* BricolageGrotesque-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BricolageGrotesque-Regular.ttf"; sourceTree = "<group>"; };
+		E3535AA42C6A7FDB000AE7B6 /* BricolageGrotesque-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BricolageGrotesque-Bold.ttf"; sourceTree = "<group>"; };
 		E361D2E32C46D37D0076639C /* Appetizers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appetizers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E361D2E62C46D37D0076639C /* AppetizersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizersApp.swift; sourceTree = "<group>"; };
 		E361D2E82C46D37D0076639C /* AppetizerTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerTabView.swift; sourceTree = "<group>"; };
@@ -159,6 +170,7 @@
 				E30EA1CD2C5198A4001179DD /* Image */,
 				E30EA1CC2C51989E001179DD /* Cells */,
 				E30EA1CB2C51988F001179DD /* UIKitComponent */,
+				E3535AA02C6A63EE000AE7B6 /* Banner.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,6 +199,17 @@
 			path = Image;
 			sourceTree = "<group>";
 		};
+		E3535A9C2C6A4A63000AE7B6 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				E3535AA42C6A7FDB000AE7B6 /* BricolageGrotesque-Bold.ttf */,
+				E3535AA22C6A7FDA000AE7B6 /* BricolageGrotesque-Medium.ttf */,
+				E3535AA32C6A7FDB000AE7B6 /* BricolageGrotesque-Regular.ttf */,
+				E3535A9D2C6A4A97000AE7B6 /* BricolageGrotesque_24pt_Condensed-Medium.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		E361D2DA2C46D37D0076639C = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +229,8 @@
 		E361D2E52C46D37D0076639C /* Appetizers */ = {
 			isa = PBXGroup;
 			children = (
+				E3535A9F2C6A4B9A000AE7B6 /* Info.plist */,
+				E3535A9C2C6A4A63000AE7B6 /* Font */,
 				E30EA1C52C519808001179DD /* Utilities */,
 				E30EA1C92C519860001179DD /* Model */,
 				E30EA1CA2C519887001179DD /* Views */,
@@ -268,7 +293,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E361D2DE2C46D37D0076639C /* Build configuration list for PBXProject "Appetizers" */;
+			buildConfigurationList = E361D2DE2C46D37D0076639C /* Build configuration list for PBXProject "ReAppetizers" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -291,7 +316,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3535AA72C6A7FDB000AE7B6 /* BricolageGrotesque-Bold.ttf in Resources */,
+				E3535A9E2C6A4A97000AE7B6 /* BricolageGrotesque_24pt_Condensed-Medium.ttf in Resources */,
+				E3535AA62C6A7FDB000AE7B6 /* BricolageGrotesque-Regular.ttf in Resources */,
 				E361D2EE2C46D3800076639C /* Preview Assets.xcassets in Resources */,
+				E3535AA52C6A7FDB000AE7B6 /* BricolageGrotesque-Medium.ttf in Resources */,
 				E361D2EB2C46D3800076639C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,6 +343,7 @@
 				E3DD68AE2C4C8E310073C60A /* LoadingView.swift in Sources */,
 				E361D2F72C46D4210076639C /* AccountView.swift in Sources */,
 				E361D3012C47EAA80076639C /* NetworkManager.swift in Sources */,
+				E3535AA12C6A63EE000AE7B6 /* Banner.swift in Sources */,
 				E30EA1C02C503759001179DD /* RemoteImage.swift in Sources */,
 				E3B2D2562C5807AD0058E059 /* AccountViewModel.swift in Sources */,
 				E30EA1CF2C519A6F001179DD /* AppetizerDetailView.swift in Sources */,
@@ -459,6 +489,7 @@
 				DEVELOPMENT_TEAM = WB6BB5XZYA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Appetizers/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -488,6 +519,7 @@
 				DEVELOPMENT_TEAM = WB6BB5XZYA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Appetizers/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -509,7 +541,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E361D2DE2C46D37D0076639C /* Build configuration list for PBXProject "Appetizers" */ = {
+		E361D2DE2C46D37D0076639C /* Build configuration list for PBXProject "ReAppetizers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E361D2EF2C46D3800076639C /* Debug */,

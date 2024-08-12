@@ -70,7 +70,7 @@ struct AppetizerDetailView: View {
                     Text("Calories")
                         .font(.system(size: 16, weight: .regular))
                     Spacer()
-                    Text("\(appetizer.calories)g")
+                    Text("\(appetizer.calories) g")
                         .font(.system(size: 16, weight: .medium))
                 }
                 .frame(width: 303)
@@ -82,7 +82,7 @@ struct AppetizerDetailView: View {
                     Text("Carbs")
                         .font(.system(size: 16, weight: .regular))
                     Spacer()
-                    Text("\(appetizer.carbs)g")
+                    Text("\(appetizer.carbs) g")
                         .font(.system(size: 16, weight: .medium))
                 }
                 .frame(width: 303)
@@ -94,7 +94,7 @@ struct AppetizerDetailView: View {
                     Text("Protein")
                         .font(.system(size: 16, weight: .regular))
                     Spacer()
-                    Text("\(appetizer.protein)g")
+                    Text("\(appetizer.protein) g")
                         .font(.system(size: 16, weight: .medium))
                 }
                 .frame(width: 303)
